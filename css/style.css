@@ -1,0 +1,298 @@
+
+*{
+
+margin: 0;
+padding: 0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{ /*Serve pra deixar definido as cores, que vão ser utilizadas no site*/
+
+--white: #fff;
+--dark1:#34344e;
+--dark2:#3a415a;
+--dark3:#566981;
+--dark4:#89a7b1;
+--dark5:#cbdad5;
+--dark6:#2f2f46;
+--cyan1:#70e3ea;
+}
+::-webkit-scrollbar{ /*Serve pra mudar a cor do scroll do site */
+
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+
+    background: var(--dark2);
+}
+::-webkit-scrollbar-thumb{
+
+    background: var(--dark3);
+}
+::-webkit-scrollbar-thumb:hover{
+
+    background: var(--dark4); 
+} 
+
+body{
+    background-color: var(--dark1);
+    background-size: 400%;
+height: 100vh;
+
+
+}
+header{ /* Parte de cima do site, botões Experiências, Quem sou eu ?, Meus Projetos, Contato*/
+display: flex;
+justify-content: space-around;
+align-items: center;
+gap: 1rem;
+flex-wrap: wrap;
+padding: .8rem;
+background-color: var(--dark6);
+min-height: 50px;
+
+}
+
+
+nav{ /*Parte dos link/botões Experiências, Quem sou eu ?, Meus Projetos, Contato*/
+display: flex;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+
+}
+.nav-links{
+
+text-decoration: none;
+color: var(--white);
+
+
+}
+.nav-links:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
+
+color: var(--dark4);
+transition: .4s;
+text-decoration: underline;
+
+}
+button{
+padding: .6rem;
+font-size: .9rem;
+border-radius: 6px;
+cursor: pointer;
+}
+
+
+:is(button,.link-action){ /* Parte do botão saber mais, "is" serve para a mesma estilização, que estiver fazendo em link-action seja feita em button  */
+
+padding: .6rem;
+font-size: .9rem;
+border-radius: 6px;
+cursor: pointer;
+transition: .4s;
+
+}
+.btn-action{
+
+
+background-color: transparent;
+border: 1px solid var(--dark3);
+color: var(--white);
+
+}
+.btn-action:hover{/*Quando passar o mouse por cima acontece alguma coisa*/ 
+
+background-color: var(--dark3);
+border: 1px solid var(--dark3);
+
+
+}
+.link-action{
+
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+}
+main{ /*Intrega todos os elementos centrais*/
+
+display: flex;
+flex-direction: column;
+gap: 2rem;
+
+}
+section{ /*Mexe com todas as seções*/
+
+padding: 4rem;
+
+}
+.first-section{ /*Primeira seção da pagina, apresentação e a logo*/
+
+display: flex;
+justify-content: space-evenly;
+gap: 2rem;
+flex-wrap: wrap;
+align-items: center;
+min-height: 650px;
+
+}
+.first-section > div{
+
+display: flex;
+flex-direction: column;
+gap: 1rem;
+min-width: 300px;
+
+}
+h1{
+font-size: 4rem;
+color: var(--white);
+letter-spacing: 8px;
+
+}
+strong{
+    color: var(--cyan1);
+}
+
+.first-section p{
+color:var(--white);
+
+}
+.first-section button{
+
+width: 200px;
+
+}
+.box-img-main{
+
+max-width: 450px;
+padding: 1rem;
+
+
+}
+.img-profile{
+    width: 100%;
+    border-radius: 50%;
+   
+}
+.second-section{ /* Segunda seção da pagina, Experiências*/
+background-color: var(--dark2);
+display: flex;
+flex-direction: column;
+gap: 2rem;
+align-items: center;
+justify-content: center;
+
+}
+.second-section ul{
+list-style: none;
+display: flex;
+justify-content: center;
+align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.second-section ul li:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
+color: var(--dark5);
+transition: .4s;
+cursor: default;
+}
+title{
+
+color: var(--dark5);
+
+
+}
+
+.second-section div{
+
+
+    background-color: var(--dark2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    }
+.second-section p{
+color: var(--dark4);
+font-weight: bold;
+letter-spacing: 2px;
+
+    }
+ .second-section p:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
+
+
+    color: var(--dark5);
+    transition: .4s;
+    cursor: default;
+ }
+ .third-section{ /*Terceira seção da pagina/quem sou eu? e imagem */
+
+    display: flex;
+flex-direction: column;
+gap: 2rem;
+
+ }
+ .third-section > div{
+
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 4rem;
+flex-wrap: wrap;
+
+ }
+ .third-section > div img{
+
+    width: 250px;
+    border-radius: 10px;
+ }
+ .third-section > div p{
+
+max-width: 600px;
+color: var(--white);
+text-align: justify;
+
+ }
+ #my-projects-list a{ /* Quarta seção, parte dos projetos*/
+
+text-decoration: none;
+color: var(--dark3);
+
+ }
+ #my-projects-list a:hover{ /*Quando passar o mouse por cima acontece alguma coisa*/ 
+
+
+    transition: .4s;
+    color: var(--dark4);
+ }
+
+ .fourth-section{
+
+
+    background-color: var(--dark2);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    
+
+
+ }
+footer{ /*Parte de baixo/ contatos*/
+
+gap: 2rem;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+
+}
+footer > div{
+display: flex;
+justify-content: center;
+gap: 2rem;
+flex-wrap: wrap;
+
+}
